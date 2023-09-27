@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,100;1,300&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+.btn::after {
+  content: "";
+  background: springgreen;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.btn {
+  overflow: hidden;
+  z-index: 10;
+}
+.btn:hover::after {
+  left: 0;
+}
+
+li a {
+  position: relative;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  background-color: springgreen;
+  width: 0;
+  height: 2px;
+
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s ease-in-out;
+}
+li a:hover::after {
+  width: 100%;
+}
+
+.btn2::after {
+  content: "";
+  background-color: springgreen;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+
+.btn2 {
+  overflow: hidden;
+  z-index: 10;
+}
+.btn2:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.red {
+  background-color: blueviolet;
+}
+.left a button::after {
+  content: "";
+  background-color: springgreen;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.left:hover a button::after {
+  width: 100%;
+}
+.linear {
+  background: linear-gradient(to right, #434343 0%, black 100%);
+}
